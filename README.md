@@ -48,9 +48,27 @@ The lot summary dives in deeper sharing how each lot is doing with their suspens
 In total, looking at the variance column, the suspension coil variance is under 100 PSI therefore meets the design specification. However, looking at the lot summary table provided above, the design specification of variance under 100 PSI is not met for Lot 3. As we can see, in Lot 3 the variance is 170.29, which exceeds the 100 PSI limit. Lot 1 and Lot 2 and way under the 100 PSI limit with a variance of .98 and 7.47 respectively. 
 
 ## T-Test on Suspension Coils
-Using your knowledge of R, perform t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
+Perform t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
 
 ### Analysis
+- H0 : There is no statistical difference between the observed sample mean and its presumed population mean.
+- Ha : There is a statistical difference between the observed sample mean and its presumed population mean.
+
+For this analysis we will focus on the p-value that is calculated from the t.test. We are given that the population mean of the PSI is 1500. First we will look at the PSI of the whole sample dataset which is shown below. The p value is shown as 0.06 which is greater than our significance level of .05. Because it is greater we cannot reject the null hypothesis and we can state that there is no statistical difference in the population mean and the mean of all the vehicles on every lot. From this we assume that the PSI is in range of what the design specifications required.   
+
+![all_ttest](https://user-images.githubusercontent.com/105755095/190275302-df2c23c5-64f1-43ee-9137-89241b37ed6b.png)
+
+I also preformed an analysis on all three lots. The first one is for Lot 1. The p value is at 1 and the mean at 1500. This means that since it is greater than our significance level (.05), we can not reject the null, therefore there is no statistical difference between the sample of Lot 1 and the population. So the vehicles in Lot 1 are in range of the design specifications required. 
+
+![lot1_ttest](https://user-images.githubusercontent.com/105755095/190275724-c7ed9c89-2c86-4409-9b6d-16b8b9e657c6.png)
+
+For the t-test analysis on Lot 2, we can see below that the p-value is at .61 which is higher than the .05 significance level. Therefore, we can not reject the null hypothesis and so there is no statistical difference between the PSI mean of Lot 2 and the population mean. This also means that the suspension coils are within the design requirments. 
+
+![lot2_ttest](https://user-images.githubusercontent.com/105755095/190275965-699d09cb-cae2-4f07-ad38-f3ede79362a0.png)
+
+Lastly, below is the t-test analysis on Lot 3. It seems like something went wrong while manufacturing the suspension coils for this lot. The p value is lower than the significance level. It is at .04 which is less than .05. Because of this, we have enough eveidence to reject the null hypothesis and assume the alternative hypothesis which says that there is a statistical differnece between Lot 3 PSI for the suspension coils versus the populations. 
+
+![lot3_ttest](https://user-images.githubusercontent.com/105755095/190276264-5ec67ac9-8efd-40ff-931a-042694472968.png)
 
 ## Study Design: MechaCar vs Competition
 summary...
