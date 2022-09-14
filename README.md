@@ -9,8 +9,8 @@ With the use of R studio, along with the MechaCar_mpg.csv file and Suspension_Co
 The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCars. The MechaCar prototypes were produced using multiple design specifications to identify ideal vehicle performance. Multiple metrics, such as vehicle length, vehicle weight, spoiler angle, drivetrain, and ground clearance, were collected for each vehicle. I will design a linear model that predicts the mpg of MechaCar prototypes using several variables from the MechaCar_mpg.csv file.
 
 ### Analysis
-H0 : The slope of the linear model is zero, or m = 0
-Ha : The slope of the linear model is not zero, or m ≠ 0
+- H0 : The slope of the linear model is zero, or m = 0
+- Ha : The slope of the linear model is not zero, or m ≠ 0
 
 Below is the linear regression model for all six variables which calculates the slope and y intercept values (also known as coefficients) that minimize the overall distance between each data point: 
 
@@ -27,16 +27,25 @@ Looking at the Pr(>|t|) part of the summary statistic, we can see that vehicle l
 No, our slope of the linear model is not considered to be 0 because we are able to safely reject our null hypothesis. This is because our p-value is 5.35e-11 which is way less than our significance level at .05%. Because the p-value is lower, we are able to reject the null hypothesis which in turn rejects that statment that our slope is equal to 0. This also means that there is a significant linear relationship. 
 
 #### Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
-For this question we will have to look at the R-squared value in the summary statistics provided above. The R-squared value is 0.7149. This value means that roughly 71% of our dependent varible, the MPG, can be predicted by this linear model. 
+For this question we will have to look at the R-squared value in the summary statistics provided above. The R-squared value is 0.7149. This value means that roughly 71% of our dependent variable, the MPG, can be predicted by this linear model. 
 
 ## Summary Statistics on Suspension Coils
-The MechaCar Suspension_Coil.csv dataset contains the results from multiple production lots. In this dataset, the weight capacities of multiple suspension coils were tested to determine if the manufacturing process is consistent across production lots. Using your knowledge of R, you’ll create a summary statistics table to show:
+The MechaCar Suspension_Coil.csv dataset contains the results from multiple production lots. In this dataset, the weight capacities of multiple suspension coils were tested to determine if the manufacturing process is consistent across production lots. I will create a summary statistics table to show:
 - The suspension coil’s PSI continuous variable across all manufacturing lots
 - The following PSI metrics for each lot: mean, median, variance, and standard deviation.
 
 ### Analysis
+The total summary table shares the mean, median, variance, and standard deviation of the weight capacity of many vehicle suspension coils through every lot.
+
+![total_summary](https://user-images.githubusercontent.com/105755095/190272233-b64f5744-eb22-4c36-b0c4-3b0d00f94526.png)
+
+The lot summary dives in deeper sharing how each lot is doing with their suspension weight capacity using the PSI data. 
+
+![lot_summary](https://user-images.githubusercontent.com/105755095/190272399-cf5cdcb9-f9ff-4fa6-a9a7-a989dcf9505f.png)
+
 
 #### The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
+In total, looking at the variance column, the suspension coil variance is under 100 PSI therefore meets the design specification. However, looking at the lot summary table provided above, the design specification of variance under 100 PSI is not met for Lot 3. As we can see, in Lot 3 the variance is 170.29, which exceeds the 100 PSI limit. Lot 1 and Lot 2 and way under the 100 PSI limit with a variance of .98 and 7.47 respectively. 
 
 ## T-Test on Suspension Coils
 Using your knowledge of R, perform t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
