@@ -84,11 +84,10 @@ I would test metrics such as;
 - the highway fuel efficiency
 - the safety rating of the vehicle
 - the annual maitenence cost
-- and the horsepower on each vehicle
 
 #### 2. What is the null hypothesis or alternative hypothesis?
-H0: There is no statistical difference between MechaCar's metrics and its presumed competitors' metrics.
-Ha: There is statistical difference between MechaCar's metrics and its presumed competitors' metrics
+- H0: There is no statistical difference between MechaCar's metrics and its presumed competitors' metrics.
+- Ha: There is statistical difference between MechaCar's metrics and its presumed competitors' metrics
 
 #### 3. What statistical test would you use to test the hypothesis? And why?
 I would use a t-test to test this hypothesis. This is because it would be simple to compare each MechaCars metric's p- value to the competitors average in each metric. If the p-value is greater than .05 then we know that we are at par with our competitors. However, if it is less than .05, we will have to see if we are above or below our competitors at that specific metric.   
