@@ -54,29 +54,44 @@ Perform t-tests to determine if all manufacturing lots and each lot individually
 - H0 : There is no statistical difference between the observed sample mean and its presumed population mean.
 - Ha : There is a statistical difference between the observed sample mean and its presumed population mean.
 
-#### Whole Sample
+#### Whole Sample:
 For this analysis we will focus on the p-value that is calculated from the t.test. We are given that the population mean of the PSI is 1500. First we will look at the PSI of the whole sample dataset which is shown below. The p value is shown as 0.06 which is greater than our significance level of .05. Because it is greater we cannot reject the null hypothesis and we can state that there is no statistical difference in the population mean and the mean of all the vehicles on every lot. From this we assume that the PSI is in range of what the design specifications required.   
 
 ![all_ttest](https://user-images.githubusercontent.com/105755095/190275302-df2c23c5-64f1-43ee-9137-89241b37ed6b.png)
 
-#### Lot 1
+#### Lot 1:
 I also preformed an analysis on all three lots. The first one is for Lot 1. The p value is at 1 and the mean at 1500. This means that since it is greater than our significance level (.05), we can not reject the null, therefore there is no statistical difference between the sample of Lot 1 and the population. So the vehicles in Lot 1 are in range of the design specifications required. 
 
 ![lot1_ttest](https://user-images.githubusercontent.com/105755095/190275724-c7ed9c89-2c86-4409-9b6d-16b8b9e657c6.png)
 
-#### Lot 2
+#### Lot 2:
 For the t-test analysis on Lot 2, we can see below that the p-value is at .61 which is higher than the .05 significance level. Therefore, we can not reject the null hypothesis and so there is no statistical difference between the PSI mean of Lot 2 and the population mean. This also means that the suspension coils are within the design requirments. 
 
 ![lot2_ttest](https://user-images.githubusercontent.com/105755095/190275965-699d09cb-cae2-4f07-ad38-f3ede79362a0.png)
 
-#### Lot 3
+#### Lot 3:
 Lastly, below is the t-test analysis on Lot 3. It seems like something went wrong while manufacturing the suspension coils for this lot. The p value is lower than the significance level. It is at .04 which is less than .05. Because of this, we have enough eveidence to reject the null hypothesis and assume the alternative hypothesis which says that there is a statistical differnece between Lot 3 PSI for the suspension coils versus the populations. 
 
 ![lot3_ttest](https://user-images.githubusercontent.com/105755095/190276264-5ec67ac9-8efd-40ff-931a-042694472968.png)
 
 ## Study Design: MechaCar vs Competition
-summary...
-#### What metric or metrics are you going to test?
-#### What is the null hypothesis or alternative hypothesis?
-#### What statistical test would you use to test the hypothesis? And why?
-#### What data is needed to run the statistical test?
+In order to compare whether or not MechaCar vehicles performance are up to their competitor's standards, I would design a study comparing MechaCar performance to other manufacturer's performance. 
+
+#### 1. What metric or metrics are you going to test?
+I would test metrics such as;
+- the costs of the vehicles
+- the city fuel efficiency
+- the highway fuel efficiency
+- the safety rating of the vehicle
+- the annual maitenence cost
+- and the horsepower on each vehicle
+
+#### 2. What is the null hypothesis or alternative hypothesis?
+H0: There is no statistical difference between MechaCar's metrics and its presumed competitors' metrics.
+Ha: There is statistical difference between MechaCar's metrics and its presumed competitors' metrics
+
+#### 3. What statistical test would you use to test the hypothesis? And why?
+I would use a t-test to test this hypothesis. This is because it would be simple to compare each MechaCars metric's p- value to the competitors average in each metric. If the p-value is greater than .05 then we know that we are at par with our competitors. However, if it is less than .05, we will have to see if we are above or below our competitors at that specific metric.   
+
+#### 4. What data is needed to run the statistical test?
+For this study, the data we will need is all the metrics stated of each vehicle for MechaCars and the competitors mean on each metric. From there, I would preform a t-test on each metric value. If the p-value is greater than the significance level of 0.05%, then there would be no statistical difference in the MechaCar's metrics to those of the competitors. This would mean we are doing just as good as our competitors average. If the p-value is less than the significance level then we would have to assume that there is a differnence.  If MechCar's mean is less than the competitors mean range, then Mechacars will have some tweeking to do in that specific metric, depending on the metric that could mean we are doing better or worse. If MechaCars mean is greater than the competitors mean range, then also depnding on the metric, it could mean we are doing either better or worse. 
